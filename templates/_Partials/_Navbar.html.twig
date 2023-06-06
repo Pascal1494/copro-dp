@@ -4,17 +4,17 @@
 	</div>
 	<div class="nav-links">
 		<ul>
-			<li><a class="active"href="{{path('app_home')}}">Accueil</a></li>
-			<li><a id=''href="{{path('app_about')}}">À propos</a></li>
-			<li><a id=''href="{{path('app_servicies')}}">Services</a></li>
-			<li><a id=''href="{{path('app_contact')}}">Contact</a></li>
+			<li><a id=''class="{{ app.request.attributes.get('_route') == 'app_home' ? 'active' : '' }}"href="{{ path('app_home') }}">Accueil</a></li>
+			<li><a id=''class="{{ app.request.attributes.get('_route') == 'app_about' ? 'active' : '' }}"href="{{ path('app_about') }}">À propos</a></li>
+			<li><a id=''class="{{ app.request.attributes.get('_route') == 'app_servicies' ? 'active' : '' }}"href="{{ path('app_servicies') }}">Services</a></li>
+			<li><a id=''class="{{ app.request.attributes.get('_route') == 'app_contact' ? 'active' : '' }}"href="{{ path('app_contact') }}">Contact</a></li>
 		</ul>
 	</div>
 	<div class="nav-links connect">
 		<ul>
 			{% if app.user %}
 				<li>
-					<a href="#">Mon compte</a>
+					<a id='' href="#">Mon compte</a>
 				</li>
 				<li>
 					<a href="#">Déconnexion</a>

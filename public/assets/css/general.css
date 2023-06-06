@@ -1,0 +1,14 @@
+.present {
+  margin: 18vh auto 0;
+  padding: 3%;
+  /* border: 1px solid red; */
+  width:80%;
+  ;
+}
+
+@media screen and (max-width:800px){
+  .present {
+  width: 98%;
+  }
+}
+

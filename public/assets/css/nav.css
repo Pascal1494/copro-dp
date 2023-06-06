@@ -18,6 +18,12 @@
   box-shadow: 0 6px 10px rgba(76, 3, 77, 0.391);
 }
 
+.scroll-active {
+color: black;
+}
+
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -60,11 +66,18 @@
   font-size: 1.5rem;
   color: #ffffff;
   text-decoration: none;
+  transition: all 1.8s ease-in-out;
 }
+
+.nav-font  {
+  color: rgb(101, 252, 0) !important;
+  /* border: 1px solid red; */
+  /* backdrop-filter: blur(3px); */
+  }
 
 .nav-links a.active {
   color: blueviolet;
-font-size: 1.2rem;
+font-size: 1.8rem;
 font-weight: 900;
 }
 
