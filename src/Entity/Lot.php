@@ -2,12 +2,21 @@
 
 namespace App\Entity;
 
-use App\Repository\LotRepository;
+use CreatedAtService;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\LotRepository;
+use App\Entity\Trait\CreatedAtTrait;
 
 #[ORM\Entity(repositoryClass: LotRepository::class)]
 class Lot
 {
+
+    use CreatedAtTrait;
+
+    private $createdAtService;
+    private $created_at;
+
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -25,8 +34,12 @@ class Lot
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $created_at = null;
+    public function __construct(CreatedAtService $createdAtService)
+    {
+        $this->createdAtService = $createdAtService;
+        $this->created_at = $this->createdAtService->createCreatedAt();
+    }
+
 
     public function getId(): ?int
     {
@@ -77,18 +90,6 @@ class Lot
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
 
         return $this;
     }
