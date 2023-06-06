@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+.home-body{
+  min-height: 200vh;
+  width: 100vw;
+  border: 1px solid pink;
+  background: url(../images/images/pont.jpg) center/cover;
+  
+  
+ }
+
+ .decal {
+  /* position: absolute; */
+  /* top: 100px; */
+  margin-top: 150px;
+  border: 10px solid red;
+}
+
+ 
