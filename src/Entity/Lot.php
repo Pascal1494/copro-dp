@@ -37,7 +37,7 @@ class Lot
     public function __construct(CreatedAtService $createdAtService)
     {
         $this->createdAtService = $createdAtService;
-        $this->created_at = $this->createdAtService->createCreatedAt();
+        $this->created_at = $this->createdAtService->createdAt();
     }
 
 

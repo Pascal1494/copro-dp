@@ -4,7 +4,7 @@ use DateTimeImmutable;
 
 class CreatedAtService
 {
-    public function createCreatedAt(): DateTimeImmutable
+    public function createdAt(): DateTimeImmutable
     {
         return new DateTimeImmutable();
     }

@@ -10,6 +10,14 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    
+    App\Service\CreatedAtService\:
+        resource: '../src/Service/CreatedAtService.php'
+        
+
+
+    App\Trait\CreatedAtTrait\:
+        resource: '../src/Trait/CreatedAtTrait.php'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
