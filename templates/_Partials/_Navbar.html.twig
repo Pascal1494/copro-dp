@@ -17,17 +17,13 @@
 					<a id='' href="#">Mon compte</a>
 				</li>
 				<li>
-					<a href="#">Déconnexion</a>
+					<a href="{{path('app_logout')}}">Déconnexion</a>
 				</li>
-
-			{% endif %}
-			<li>
-				<a href="#">Connexion</a>
-			</li>
-			<li>
-				<a href="#">Inscription</a>
-			</li>
-		</ul>
+			{% else %}
+				<li><a href="{{path('app_login')}}">Connexion</a></li>
+				<li><a href="{{path('app_register')}}">Inscription</a></li>
+			</ul>
+		{% endif %}
 	</div>
 	<div class="burger">
 		<div class="line"></div>

@@ -12,12 +12,14 @@
 			<link rel="stylesheet" href="assets/css/home.css">
 			<link rel="stylesheet" href="assets/css/general.css">
 			<link rel="stylesheet" href="assets/css/nav.css">
+			<link rel="stylesheet" href="assets/css/footer.css">
 		{% endblock %}
 	</head>
 	<body>
 		{% include '_Partials/_Navbar.html.twig' %}
 		{# <container class="decal"></container> #}
 		{% block body %}{% endblock %}
+		{% include '_Partials/_Footer.html.twig' %}
 		{% block javascripts %}
 			<script src="assets/js/nav.js"></script>
 			<script src="assets/js/scroll.js"></script>
