@@ -34,6 +34,8 @@ class Lot
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
+    
+
     public function __construct(CreatedAtService $createdAtService)
     {
         $this->createdAtService = $createdAtService;
@@ -93,4 +95,6 @@ class Lot
 
         return $this;
     }
+
+    
 }
